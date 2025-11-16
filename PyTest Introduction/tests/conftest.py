@@ -42,7 +42,7 @@ def validate_schema():
 
 
 # Pytest hook to mark unmarked tests with a custom mark
-def pytest_collection_modifyitems(items):
+def pytest_collection_modifyitems(items, config):
     for item in items:
-        if not item.iter_markers():
-            item.add_marker(pytest.mark.unmarked)
+        if not any(item.iter_markers()):
+            item.add_marker("unmarked")
