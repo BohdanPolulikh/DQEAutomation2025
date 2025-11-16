@@ -1,5 +1,5 @@
 import pytest
-import os.path
+
 def test_file_not_empty(data):
     assert not data.empty, "File is empty!"
 
