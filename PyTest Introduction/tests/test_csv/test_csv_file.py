@@ -5,7 +5,7 @@ def test_file_not_empty(data):
 
 @pytest.mark.validate_csv
 def test_schema(data, validate_schema):
-    expected_columns = ['id', 'name', 'age', 'email']
+    expected_columns = ['id', 'name', 'age', 'email', 'is_active']
     validate_schema(list(data.columns), expected_columns)
 
 @pytest.mark.validate_csv
