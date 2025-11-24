@@ -26,7 +26,7 @@ def source_data(db_connection):
 
 @pytest.fixture(scope='module')
 def target_data(parquet_reader):
-    target_path = "parquet_data/facility_type_avg_time_spent_per_visit_date"
+    target_path = "/parquet_data/facility_type_avg_time_spent_per_visit_date"
     data = parquet_reader.process(target_path, include_subfolders=True)
     df = data.sort_values(["facility_type", "visit_date"]).reset_index(drop=True)    
     return df
