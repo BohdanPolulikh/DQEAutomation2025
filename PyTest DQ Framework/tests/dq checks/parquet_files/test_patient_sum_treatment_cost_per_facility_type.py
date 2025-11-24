@@ -28,7 +28,7 @@ def source_data(db_connection):
 
 @pytest.fixture(scope='module')
 def target_data(parquet_reader):
-    target_path = "/var/jenkins_home/workspace/parquet_data/patient_sum_treatment_cost_per_facility_type"
+    target_path = "parquet_data/patient_sum_treatment_cost_per_facility_type"
     data = parquet_reader.process(target_path, include_subfolders=True)
     df = data.sort_values(["facility_type", "full_name"]).reset_index(drop=True)    
     return df
