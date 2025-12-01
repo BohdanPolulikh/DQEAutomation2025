@@ -45,7 +45,7 @@ LEGEND_SELECTORS = {
     "Specialty Center": ".legend g.traces:nth-child(3) rect.legendtoggle"
 }
 
-# Послідовність дій для фільтрування
+# Sequence of actions for filtering
 SEQUENCE_OF_FILTER_ACTIONS = [
     ["Clinic"],
     ["Hospital"],
